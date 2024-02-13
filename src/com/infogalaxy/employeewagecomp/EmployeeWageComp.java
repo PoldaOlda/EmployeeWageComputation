@@ -1,17 +1,16 @@
 package com.infogalaxy.employeewagecomp;
 
-import java.util.Scanner;
+import java.util.Random;
 
 public class EmployeeWageComp {
 
 	public static void main(String[] args) {
 		
 		int attendance = 0;
-		Scanner sc = new Scanner(System.in);
 		System.out.println("Welcome to Employee Wage Computation Program");
 		
-		System.out.println("Enter the Attendance: [0-Absent / 1-Present]:");
-		attendance = sc.nextInt();
+		Random random = new Random();
+		attendance = random.nextInt(9) % 2;
 		
 		if(attendance == 0) {
 			System.out.println("Employee is Absent");
