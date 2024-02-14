@@ -6,10 +6,12 @@ public class EmployeeWageComp {
 
 	public static void main(String[] args) {
 		
-		int attendance = 0;
-		int dailyWage = 0;
+		int attendance;
+		int employee_type;
+		int dailyWage;
 		final int WAGE_PER_HR = 20;
-		final int FULL_DAY_HR = 8;
+		final int FULL_TIME_HR = 8;
+		final int PART_TIME_HR = 4;
 		
 		System.out.println("Welcome to Employee Wage Computation Program");
 		
@@ -21,7 +23,14 @@ public class EmployeeWageComp {
 		}
 		else {
 			System.out.println("Employee is Present");
-			dailyWage = WAGE_PER_HR * FULL_DAY_HR;
+			employee_type = random.nextInt(9) % 2;
+			if(employee_type == 0) {
+				System.out.println("Employee is Part Time");
+				dailyWage = WAGE_PER_HR * PART_TIME_HR;
+			} else {
+				System.out.println("Employee is Full Time");
+				dailyWage = WAGE_PER_HR * FULL_TIME_HR;
+			}
 			System.out.println("Employee Wage = "+ dailyWage);
 		}
 	}
