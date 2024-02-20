@@ -9,6 +9,7 @@ public class EmployeeWageComp {
 		int attendance;
 		int employee_type;
 		int dailyWage = 0;
+		int total_wage = 0;
 		final int WAGE_PER_HR = 20;
 		final int FULL_TIME_HR = 8;
 		final int PART_TIME_HR = 4;
@@ -38,11 +39,13 @@ public class EmployeeWageComp {
 					dailyWage = WAGE_PER_HR * FULL_TIME_HR;
 					break; 
 				}
+				total_wage += dailyWage;
 				System.out.println("Employee Wage = "+ dailyWage);
 				break;
 			}
 			System.out.println("---------------------");
-		}	
+		}
+		System.out.println("Total Monthly Wag="+total_wage);
 	}
 
 }
